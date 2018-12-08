@@ -8,20 +8,22 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Assuming you have a working go installation, navigate into gopath/src/github.com/<username>/ and clone this repository:
+Assuming you have a working go installation, docker and docker-compose setup, navigate into gopath/src/github.com/<username>/ and clone this repository:
 
 ```
-Give examples
+cd ~/go/src/github.com/bluebrown
+git clone https://github.com/bluebrown/fragments.git
+cd fragments
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
+First make sure the depenedencies are installed using godep:
 ```
-Give the example
+$ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+$ godep install
 ```
 
 And repeat

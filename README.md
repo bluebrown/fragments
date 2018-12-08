@@ -23,11 +23,11 @@ $ cd fragments
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running. since the project is in development these steps show how to setup the DevOps enviroment.
+A step by step series of examples that tell you how to get a development env running.
 
 First make sure the depenedencies are installed using godep:
 ```
-$ godep install
+$ dep ensure
 ```
 
 Build the Docker image:

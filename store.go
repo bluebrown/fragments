@@ -12,10 +12,20 @@ func (_db *db) popUser() *User {
 	return &_db.users[0]
 }
 
-/* Store singleton stores mock data
-   and responds to graphql-type-requests. */
+// Return userlist.
+func (_db *db) popUsers() []*User {
+	u := []*User{}
+	for key := range _db.users {
+		u = append(u, &_db.users[key])
+	}
+	return u
+}
+
+// Store singleton stores mock data
+// and responds to graphql-type-requests.
 var store = db{
 	users: []User{
 		User{name: "John Coyle"},
+		User{name: "Frank Jones"},
 	},
 }

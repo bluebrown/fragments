@@ -17,6 +17,11 @@ func (*Resolver) User() *User {
 	return store.popUser()
 }
 
+//Users resolves the users query.
+func (*Resolver) Users() []*User {
+	return store.popUsers()
+}
+
 //
 //
 //** Type User **

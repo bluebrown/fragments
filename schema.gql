@@ -6,6 +6,7 @@ schema {
 type Query {
     hello: String!
     user: User!
+    users: [User!]!
 }
 
 type User {

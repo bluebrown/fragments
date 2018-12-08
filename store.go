@@ -1,16 +1,21 @@
 package main
 
-// Simple mock database that implements gql types.
+/* Simple mock data struct that
+   provides functionality to
+   handle query's from graphql-types. */
 type db struct {
 	users []User
 }
 
+// Return a single user.
 func (_db *db) popUser() *User {
 	return &_db.users[0]
 }
 
+/* Store singleton stores mock data
+   and responds to graphql-type-requests. */
 var store = db{
 	users: []User{
-		User{name: "Tony Test"},
+		User{name: "John Coyle"},
 	},
 }

@@ -1,3 +1,4 @@
+# Flat GraphQL schema.
 schema {
     query: Query
 }

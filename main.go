@@ -22,7 +22,9 @@ func main() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-// If there is an error return an empty schema.
+/* getSchema reads file from specified path into
+   byte-buffer. Returns an empty byte if an
+   error occurs, for revovery purposes. */
 func getSchema(path string) (string, error) {
 	b, err := ioutil.ReadFile(path)
 	if err != nil {

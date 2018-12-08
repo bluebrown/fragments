@@ -10,10 +10,13 @@ import (
 )
 
 func main() {
-	// Get Schema,
+
+	store.init() // Init the store with some mock data.
+
+	// Read schema,
 	s, err := getSchema("./schema.gql")
 	if err != nil {
-		log.Println(err)
+		log.Println("No shema found!", err)
 	} // and parse it.
 	schema := graphql.MustParseSchema(s, &Resolver{})
 

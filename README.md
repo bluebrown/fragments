@@ -16,9 +16,9 @@ $ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 ```
 navigate into gopath/src/github.com/<username>/ and clone this repository:
 ```
-cd ~/go/src/github.com/bluebrown
-git clone https://github.com/bluebrown/fragments.git
-cd fragments
+$ cd ~/go/src/github.com/bluebrown
+$ git clone https://github.com/bluebrown/fragments.git
+$ cd fragments
 ```
 
 ### Installing
@@ -43,12 +43,12 @@ $ go run .
 
 Request all message-texts from GraphQL-API:
 ```
-curl -XPOST -d '{"query": "{ messages{ text } }"  }' localhost:8080/api -w "\n"
+$ curl -XPOST -d '{"query": "{ messages{ text } }"  }' localhost:8080/api -w "\n"
 ```
 
 Do more complex query to get a user-mail by name:
 ```
-curl -XPOST -d '{"query": "{ user( Name: \"John Coyle\" ){ name mail } }"  }' localhost:8080/api -w "\n"
+$ curl -XPOST -d '{"query": "{ user( Name: \"John Coyle\" ){ name mail } }"  }' localhost:8080/api -w "\n"
 ```
 
 ## Running the tests

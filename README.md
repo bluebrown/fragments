@@ -32,10 +32,14 @@ $ godep install
 
 Build the Docker image:
 ```
-docker-compose build
+$ docker-compose build
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+For example below is the development usage shown.:
+```
+$ docker-compose run --service-ports api /bin/bash
+$ go run .
+```
 
 ## Running the tests
 

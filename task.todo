@@ -1,4 +1,7 @@
+This is your list. Don't ask, just do it!
 
 [] Create Small setup guide in readme-file.
 
-[] implement arguments for gql query.
+[x] Implement arguments for graphQL-query.
+[] Implement edges.
+[] Implement message subscription.

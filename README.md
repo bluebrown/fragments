@@ -1,13 +1,14 @@
 Cloud-Native Backend exposing a GraphQL API.
 
- - Installation
+ - Setup
 
- - GoDep
+ - Example Queries
+
+ - GraphQL API
 
  - Dockerfile
 
  - Docker-Compose
 
  - Kubernetes
-
- - GraphQL API
+ 

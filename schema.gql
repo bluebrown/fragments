@@ -15,7 +15,7 @@ type User {
     mail: String!
 }
 
-type Message {
+type Message{#TODO: Represent from-to with a graphQL edge (One-To-Many).
     text: String!
     from: User!
     to: [User!]!

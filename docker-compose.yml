@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  api:
+    build: ./api
+    image: fragment-api
+    ports:
+    - '8080:8080'
+    volumes:
+      - './api/src:/go/src/github.com/bluebrown/fragments/api/src'

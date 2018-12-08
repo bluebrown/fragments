@@ -41,9 +41,14 @@ $ docker-compose run --service-ports api /bin/bash
 $ go run .
 ```
 
-Request data from GraphQL-API
+Request all message-texts from GraphQL-API:
 ```
-curl -XPOST -d '{"query": "{ user(Name: \"John Coyle\"){name mail} }"  }' localhost:8080/api -w "\n"
+curl -XPOST -d '{"query": "{ messages{ text } }"  }' localhost:8080/api -w "\n"
+```
+
+Do more complex query to get a user-mail by name:
+```
+curl -XPOST -d '{"query": "{ user( Name: \"John Coyle\" ){ name mail } }"  }' localhost:8080/api -w "\n"
 ```
 
 ## Running the tests

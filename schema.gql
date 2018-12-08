@@ -11,5 +11,6 @@ type Query {
 
 type User {
     name: String!
+    mail: String!
 }
 

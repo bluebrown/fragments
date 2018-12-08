@@ -25,7 +25,13 @@ func (_db *db) popUsers() []*User {
 // and responds to graphql-type-requests.
 var store = db{
 	users: []User{
-		User{name: "John Coyle"},
-		User{name: "Frank Jones"},
+		User{
+			name: "John Coyle",
+			mail: "coyle@gmail.com",
+		},
+		User{
+			name: "Frank Jones",
+			mail: "slaptstick@montecarl.io",
+		},
 	},
 }

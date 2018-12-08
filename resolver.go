@@ -29,9 +29,15 @@ func (*Resolver) Users() []*User {
 // User implements the user type.
 type User struct {
 	name string
+	mail string
 }
 
 // Name resolves the User Name query.
 func (u *User) Name() string {
 	return u.name
+}
+
+// Mail resolves the User Name query.
+func (u *User) Mail() string {
+	return u.mail
 }

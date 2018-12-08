@@ -1,32 +1,32 @@
-Cloud-Native Backend exposing a GraphQL API.
+# Cloud-Native Backend exposing a GraphQL API.
 
 This is my humble try to implement a GraphQL backend using https://github.com/graph-gophers/graphql-go. Here I will document  what I find out and how I set things up.
 
-Setup:
+## Setup:
 - Fetch godep
 - enter gopath/github.com/<username>/
 - run dep install.
 
-Example Queries
+## Example Queries
 - We use curl to get some data.
 
-GraphQL API
+## GraphQL API
 - schema
 - database
 
-Dockerfile
+## Dockerfile
 - Explaination
 - Examples
 
-Docker-Compose
+## Docker-Compose
 - Development
 - Production
 
-Kubernetes
+## Kubernetes
 - Setup
 - Services
 - Load Balancing
 - Security
 
-Wiki
+## Wiki
 - Find the wiki here for more info:

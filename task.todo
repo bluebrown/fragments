@@ -1,7 +1,18 @@
 This is your list. Don't ask, just do it!
 
-[] Create Small setup guide in readme-file.
+Minor
+[x] Create Small setup guide in readme-file
+[] Improve README.md
+[] Create Wiki
 
-[x] Implement arguments for graphQL-query.
-[] Implement edges.
-[] Implement message subscription.
+Major
+[x] Implement arguments for graphQL-query
+[] Implement edges
+[] Implement message subscription
+[] Create Test suite
+
+Milestone
+[x] Get GraphQL API up and running
+[] Connect to Database
+[] Implement frontend-fragment
+[] Deploy on kubernetes

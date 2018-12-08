@@ -23,7 +23,7 @@ cd fragments
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development env running. since the project is in development these steps show how to setup the DevOps enviroment.
 
 First make sure the depenedencies are installed using godep:
 ```
@@ -35,10 +35,15 @@ Build the Docker image:
 $ docker-compose build
 ```
 
-For example below is the development usage shown.:
+Spin up the container and run the go-code:
 ```
 $ docker-compose run --service-ports api /bin/bash
 $ go run .
+```
+
+Request data from GraphQL-API
+```
+curl -XPOST -d '{"query": "{ user(Name: \"John Coyle\"){name mail} }"  }' localhost:8080/api -w "\n"
 ```
 
 ## Running the tests

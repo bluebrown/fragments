@@ -1,6 +1,6 @@
 # Cloud-Native GraphQL API
 
-This is my humble try to implement a GraphQL backend using https://github.com/graph-gophers/graphql-go. Here I will document  what I find out and how I set things up.
+This is my humble try to implement a GraphQL backend. Here I will document  what I find out and how I set things up.
 
 ## Getting Started
 
@@ -71,9 +71,10 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Go](http://www.dropwizard.io/1.0.2/docs/) - Language
+* [graph-gophers](https://github.com/graph-gophers/graphql-go) - Framework
+* [GoDep](https://rometools.github.io/rome/) - Dependencies
+* [Docker](https://rometools.github.io/rome/) - DevOps
 
 ## Contributing
 

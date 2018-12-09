@@ -14,7 +14,7 @@ Install godep:
 ```
 $ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 ```
-navigate into gopath/src/github.com/USERNAME/, clone this repository and enter the project:
+navigate into gopath/src/github.com/username/, clone this repository and enter the project:
 ```
 $ cd ~/go/src/github.com/bluebrown
 $ git clone https://github.com/bluebrown/fragments.git &&cd fragments

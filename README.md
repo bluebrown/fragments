@@ -1,5 +1,5 @@
 # Cloud-Native GraphQL API
-![picture](https://outcrawl.com/static/cover-4772a81f84b65ba37535f8c41959eeaa-6c374.jpg)
+![picture](https://cdn-images-1.medium.com/max/2000/1*ObWwLWml6KVvh-ZXbYSTVQ.png)
 
 This is my humble try to implement a GraphQL backend. Here I will document what I find out and how I set things up.
 

@@ -1,5 +1,9 @@
 package main
 
+import (
+	"github.com/graph-gophers/graphql-go"
+)
+
 //
 //
 // ! Root Resolver
@@ -10,14 +14,9 @@ type Resolver struct{}
 //
 // ** User **
 
-// User resolves the user query.
-func (*Resolver) User(args struct{ Name string }) *User {
-	for key, val := range store.users {
-		if args.Name == val.name {
-			return &store.users[key]
-		}
-	}
-	return &User{"None", "None"}
+//User asks the model politely.
+func (*Resolver) User(args struct{ ID graphql.ID }) *User {
+	return Model.UID(args)
 }
 
 //Users resolves the users query.
@@ -44,52 +43,4 @@ func (*Resolver) Messages() []*Message {
 		m = append(m, &store.messages[key])
 	}
 	return m
-}
-
-//
-//
-// ! Type User
-
-// User implements the user type.
-type User struct {
-	name string
-	mail string
-}
-
-// Name resolves the User-Name query.
-func (u *User) Name() string {
-	return u.name
-}
-
-// Mail resolves the User-Mail query.
-func (u *User) Mail() string {
-	return u.mail
-}
-
-//
-//
-// ! Type Message
-
-// Message implents Message type.
-type Message struct {
-	text string
-	from *User
-	to   []*User
-}
-
-// Text returns message text.
-func (m *Message) Text() string {
-	return m.text
-}
-
-// From returns pointer to message-senders
-// memory address.
-func (m *Message) From() *User {
-	return m.from
-}
-
-// To return array of pointer to message-senders
-// memory adress.
-func (m *Message) To() []*User {
-	return m.to
 }

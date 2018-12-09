@@ -15,14 +15,17 @@ func (_db *db) init() {
 
 	_db.users = []User{
 		User{
+			id:   "1",
 			name: "John Coyle",
 			mail: "coyle@gmail.com",
 		},
 		User{
+			id:   "2",
 			name: "Frank Jones",
 			mail: "slaptstick@montecarl.io",
 		},
 		User{
+			id:   "3",
 			name: "Hank Arnold",
 			mail: "macbane@outfox.pong",
 		},

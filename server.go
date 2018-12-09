@@ -9,14 +9,20 @@ import (
 	"github.com/graph-gophers/graphql-go/relay"
 )
 
-func main() {
-	store.init() // Init the store with some mock data.
+type serverConf struct {
+	staticPattern string
+	apiPattern    string
+	schemaPath    string
+	port          string
+}
+
+func newServer(c serverConf) {
 	// Spin up static File Server
-	http.Handle("/", fragmentServer())
+	http.Handle(c.staticPattern, fragmentServer())
 	// Read, parse and serve schema.
-	http.Handle("/api", schemaHandler("./schema.gql"))
+	http.Handle(c.apiPattern, schemaHandler(c.schemaPath))
 	// Serve GraphQL API
-	log.Fatalln(http.ListenAndServe(":8080", nil))
+	log.Fatalln(http.ListenAndServe(c.port, nil))
 }
 
 // schemaHandler reads and parses a schema file.

@@ -4,13 +4,14 @@ schema {
 }
 
 type Query {
-    user(Name: String!): User!
+    user(ID: ID!): User!
     users: [User!]!
     message: Message!
     messages: [Message!]!
 }
 
 type User {
+    id: ID!
     name: String!
     mail: String!
 }

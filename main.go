@@ -1,18 +1,20 @@
 package main
 
-// Model Singleton
-var Model = driver{
-	model: model{},
+import (
+	"log"
+
+	"github.com/bluebrown/fragments/server"
+)
+
+// SConfig holds the server configuration.
+var SConfig = server.Config{
+	StaticPattern: "/",
+	APIPattern:    "/api",
+	SchemaPath:    "./gtype/schema.gql",
+	Port:          ":8080",
 }
 
 func main() {
-	store.init() // Init the store with some mock data.
-
-	// Start Server
-	newServer(serverConf{
-		staticPattern: "/",
-		apiPattern:    "/api",
-		schemaPath:    "./schema.gql",
-		port:          ":8080",
-	})
+	log.Println("Running on port" + SConfig.Port)
+	log.Fatalln(server.Run(SConfig))
 }

@@ -1,0 +1,36 @@
+schema{
+    query: Query
+}
+
+/* TODO:
+Unify query to a query that takes and
+array as agrument. So it can handle both
+queries, for single and multiple objects.*/
+type Query{
+    info(id: ID!): Info
+    user(id: ID!): User!
+    users: [User!]!
+    message: Message!
+    messages: [Message!]!
+}
+
+type Info{
+    id: ID!
+    text: String!
+}
+
+type User {
+    id: ID!
+    name: String!
+    mail: String!
+}
+
+/* TODO:
+Represent from-to
+with a graphQL edge
+(One-To-Many).*/
+type Message{
+    text: String!
+    from: User!
+    to: [User!]!
+}

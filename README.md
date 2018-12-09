@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-This guide assumes you have a working go installation and docker/docker-compose setup. 
+This guide assumes you have a working go installation and docker/docker-compose setup.
 
 Install godep:
 ```

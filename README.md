@@ -1,4 +1,5 @@
 # Cloud-Native GraphQL API
+![picture](https://www.cuelogic.com/wp-content/uploads/2018/01/future-ready-Cloud-Native-application.jpg)
 
 This is my humble try to implement a GraphQL backend. Here I will document what I find out and how I set things up.
 

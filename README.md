@@ -43,6 +43,8 @@ $ docker-compose run --service-ports api /bin/bash
 $ go run .
 ```
 
+![picture](https://cdn-images-1.medium.com/max/1600/1*E384h_zLRunyFwEdyEpF7A.png)
+
 Request all message-texts from GraphQL-API:
 ```
 $ curl -XPOST -d '{"query": "{ messages{ text } }"  }' localhost:8080/api -w "\n"

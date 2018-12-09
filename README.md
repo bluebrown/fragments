@@ -1,6 +1,6 @@
 # Cloud-Native GraphQL API
 
-This is my humble try to implement a GraphQL backend. Here I will document  what I find out and how I set things up.
+This is my humble try to implement a GraphQL backend. Here I will document what I find out and how I set things up.
 
 ## Getting Started
 
@@ -8,17 +8,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Assuming you have a working go installation, docker and docker-compose setup 
+This guide assumes you have a working go installation and docker/docker-compose setup. 
 
 Install godep:
 ```
 $ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 ```
-navigate into gopath/src/github.com/<username>/ and clone this repository:
+navigate into gopath/src/github.com/<username>/ clone this repository and enter the project:
 ```
 $ cd ~/go/src/github.com/bluebrown
-$ git clone https://github.com/bluebrown/fragments.git
-$ cd fragments
+$ git clone https://github.com/bluebrown/fragments.git &&cd fragments
 ```
 
 ### Installing
@@ -46,9 +45,9 @@ Request all message-texts from GraphQL-API:
 $ curl -XPOST -d '{"query": "{ messages{ text } }"  }' localhost:8080/api -w "\n"
 ```
 
-Do more complex query to get a user-mail by name:
+Do more complex query to get a users name and mail by ID:
 ```
-$ curl -XPOST -d '{"query": "{ user( Name: \"John Coyle\" ){ name mail } }"  }' localhost:8080/api -w "\n"
+$ curl -XPOST -d '{"query": "{ user( ID: \"1\" ){ name mail } }"  }' localhost:8080/api -w "\n"
 ```
 
 ## Running the tests

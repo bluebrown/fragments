@@ -4,6 +4,7 @@ Minor
 [x] Create Small setup guide in readme-file
 [] Improve README.md
 [] Create Wiki
+[] Build small example frontend
 
 Major
 [x] Implement arguments for graphQL-query

@@ -10,28 +10,31 @@ import (
 )
 
 func main() {
-
 	store.init() // Init the store with some mock data.
-
-	// Read schema,
-	s, err := getSchema("./schema.gql")
-	if err != nil {
-		log.Println("No shema found!", err)
-	} // and parse it.
-	schema := graphql.MustParseSchema(s, &Resolver{})
-
-	// Handle http graph-queries based on schema.
-	http.Handle("/api", &relay.Handler{Schema: schema})
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	// Spin up static File Server
+	http.Handle("/", fragmentServer())
+	// Read, parse and serve schema.
+	http.Handle("/api", schemaHandler("./schema.gql"))
+	// Serve GraphQL API
+	log.Fatalln(http.ListenAndServe(":8080", nil))
 }
 
-/* getSchema reads file from specified path into
-   byte-buffer. Returns an empty byte if an
-   error occurs, for revovery purposes. */
-func getSchema(path string) (string, error) {
+// schemaHandler reads and parses a schema file.
+// It returns a handler that can get used by an http router.
+func schemaHandler(path string) *relay.Handler {
 	b, err := ioutil.ReadFile(path)
 	if err != nil {
-		return "", err
+		log.Fatalln(err)
 	}
-	return string(b), nil
+	return &relay.Handler{ // ! Here is where the magic happens!
+		Schema: graphql.MustParseSchema(string(b), &Resolver{}),
+	}
+}
+
+// fragmentserver is a static fileserver with
+// basic configuration to serve the service fragment.
+func fragmentServer() http.Handler {
+	fs := http.FileServer(http.Dir("static/"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+	return fs
 }

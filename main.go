@@ -3,11 +3,12 @@ package main
 import (
 	"log"
 
+	"github.com/bluebrown/fragments/model"
 	"github.com/bluebrown/fragments/server"
 )
 
-// SConfig holds the server configuration.
-var SConfig = server.Config{
+// SConfig referrs to server-configuration.
+var SConfig = &server.Config{
 	StaticPattern: "/",
 	APIPattern:    "/api",
 	SchemaPath:    "./gtype/schema.gql",
@@ -15,6 +16,9 @@ var SConfig = server.Config{
 }
 
 func main() {
+
+	model.Example()
+
 	log.Println("Running on port" + SConfig.Port)
 	log.Fatalln(server.Run(SConfig))
 }

@@ -20,7 +20,7 @@ type Config struct {
 
 // Run takes configuration arguments, reads&parses the
 // graphql-schema and spins up the server with static directory.
-func Run(conf Config) error {
+func Run(conf *Config) error {
 	// Spin up static File Server
 	http.Handle(conf.StaticPattern, FragmentServer())
 	// Read, parse and serve schema.

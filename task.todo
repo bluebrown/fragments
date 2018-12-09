@@ -14,6 +14,6 @@ Major
 
 Milestone
 [x] Get GraphQL API up and running
-[] Connect to Database
+[x] Connect to Database
 [] Implement frontend-fragment
 [] Deploy on kubernetes

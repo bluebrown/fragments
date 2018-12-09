@@ -4,24 +4,24 @@ import graphql "github.com/graph-gophers/graphql-go"
 
 // User implements the user type.
 type User struct {
-	id   graphql.ID
-	name string
-	mail string
+	GID   graphql.ID
+	GName string
+	GMail string
 }
 
 // Name resolves the User-Name query.
 func (u *User) Name() string {
-	return u.name
+	return u.GName
 }
 
 // Mail resolves the User-Mail query.
 func (u *User) Mail() string {
-	return u.mail
+	return u.GMail
 }
 
 // ID resolves the User-ID query.
 func (u *User) ID() graphql.ID {
-	return u.id
+	return u.GID
 }
 
 //User asks the model politely.

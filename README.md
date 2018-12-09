@@ -14,14 +14,8 @@ Install godep:
 ```
 $ curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 ```
- <details>
-  <summary>
-   navigate into gopath/src/github.com/UserName/, clone this repository and enter the project:
- </summary>
-  <p>
-   :exclamation: Subtitute UserName for the username of you githubaccount.
- </p>
-</details>
+navigate into gopath/src/github.com/***UserName***/, clone this repository and enter the project: <br/>
+:exclamation: *Subtitute* ***UserName*** *for the username of you githubaccount.*
 
 ```
 $ cd ~/go/src/github.com/bluebrown

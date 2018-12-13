@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 
-	"github.com/bluebrown/fragments/model"
 	"github.com/bluebrown/fragments/server"
 )
 
@@ -17,7 +16,7 @@ var SConfig = &server.Config{
 
 func main() {
 
-	model.Example()
+	//model.Example()
 
 	log.Println("Running on port" + SConfig.Port)
 	log.Fatalln(server.Run(SConfig))

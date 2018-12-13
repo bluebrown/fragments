@@ -5,6 +5,7 @@ Minor
 [] Improve README.md
 [] Create Wiki
 [] Build small example frontend
+[] Upload tiedot image to docker hub
 
 Major
 [x] Implement arguments for graphQL-query

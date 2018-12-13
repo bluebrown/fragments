@@ -44,7 +44,7 @@ $ go run .
 ```
 Request all message-texts from GraphQL-API:
 ```
-$ curl -XPOST -d '{"query": "{ messages{ text } }"  }' localhost:8080/api -w "\n"
+$ curl -XPOST -d '{"query": "{ info(id:1){text}}" }' localhost:8080/api -w "\n"
 ```
 
 Do more complex query to get a users name and mail by ID:

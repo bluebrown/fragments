@@ -8,17 +8,10 @@ services:
     - '8080:8080'
     volumes:
       - './:/go/src/github.com/bluebrown/fragments/'
-    command:
-      - go
-      - run
-      - .
 
   store:
-    image: redis
+    image: bluebrown/tiedot:1.0
     ports:
-      - '6379:6379'
+      - '3661:3661'
     volumes:
       - "./data:/data"
-    entrypoint:
-      - redis-server
-      - --appendonly yes

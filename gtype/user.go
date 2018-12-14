@@ -23,19 +23,3 @@ func (u *User) Mail() string {
 func (u *User) ID() graphql.ID {
 	return u.GID
 }
-
-//User asks the model politely.
-func (*Resolver) User(args struct{ ID graphql.ID }) *User {
-	return &User{args.ID, "Jim", "gmail"}
-}
-
-//
-//* Resolver =>
-
-//Users resolves the users query.
-func (*Resolver) Users() []*User {
-	return []*User{
-		&User{"2", "Hans", "pmail"},
-		&User{"3", "john", "jmail"},
-	}
-}

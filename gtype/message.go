@@ -23,19 +23,3 @@ func (m *Message) From() *User {
 func (m *Message) To() []*User {
 	return m.GTo
 }
-
-//
-//* Resolver =>
-
-// Message resolves the message query.
-func (*Resolver) Message() *Message {
-	return &Message{"1", &User{}, []*User{}}
-}
-
-// Messages resolves message list query.
-func (*Resolver) Messages() []*Message {
-	return []*Message{
-		&Message{"2", &User{}, []*User{}},
-		&Message{"3", &User{}, []*User{}},
-	}
-}

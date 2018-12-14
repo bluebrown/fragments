@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/bluebrown/fragments/gtype"
+	"github.com/bluebrown/fragments/resolver"
 	graphql "github.com/graph-gophers/graphql-go"
 	"github.com/graph-gophers/graphql-go/relay"
 )
@@ -37,7 +37,7 @@ func SchemaHandler(path string) *relay.Handler {
 		log.Fatalln(err)
 	}
 	return &relay.Handler{ // ! Here is where the magic happens!
-		Schema: graphql.MustParseSchema(string(b), &gtype.Resolver{}),
+		Schema: graphql.MustParseSchema(string(b), &resolver.Resolver{}),
 	}
 }
 

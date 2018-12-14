@@ -10,7 +10,7 @@ import (
 var SConfig = &server.Config{
 	StaticPattern: "/",
 	APIPattern:    "/api",
-	SchemaPath:    "./gtype/schema.gql",
+	SchemaPath:    "./schema.gql",
 	Port:          ":8080",
 }
 

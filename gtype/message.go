@@ -1,10 +1,18 @@
 package gtype
 
+import graphql "github.com/graph-gophers/graphql-go"
+
 // Message implents Message type.
 type Message struct {
+	GID   graphql.ID
 	GText string
 	GFrom *User
 	GTo   []*User
+}
+
+// ID resolves the ID query
+func (m *Message) ID() graphql.ID {
+	return m.GID
 }
 
 // Text returns message text.

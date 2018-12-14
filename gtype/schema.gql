@@ -8,7 +8,7 @@ array as agrument. So it can handle both
 queries, for single and multiple objects.*/
 type Query{
     info(id: ID!): Info
-    user(id: ID!: User!
+    user(id: ID!): User!
     users: [User!]!
     message: Message!
     messages: [Message!]!

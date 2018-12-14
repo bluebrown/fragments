@@ -29,6 +29,9 @@ func (*Resolver) User(args struct{ ID graphql.ID }) *User {
 	return &User{args.ID, "Jim", "gmail"}
 }
 
+//
+//* Resolver =>
+
 //Users resolves the users query.
 func (*Resolver) Users() []*User {
 	return []*User{

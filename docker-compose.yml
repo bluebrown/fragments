@@ -3,15 +3,19 @@ version: '3.4'
 services:
   api:
     build: .
-    image: fragments-api
+    image: bluebrown/fragments:0.0.1
     ports:
     - '8080:8080'
     volumes:
       - './:/go/src/github.com/bluebrown/fragments/'
+    command:
+      - go
+      - run
+      - .
 
-  store:
-    image: bluebrown/tiedot:1.0
-    ports:
-      - '3661:3661'
-    volumes:
-      - "./data:/data"
+#  store:
+#    image: bluebrown/tiedot:1.0
+#    ports:
+#      - '3661:3661'
+#    volumes:
+#      - "./data:/data"

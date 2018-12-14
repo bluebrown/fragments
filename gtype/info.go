@@ -16,10 +16,13 @@ func (i *Info) ID() graphql.ID { return i.GID }
 // Text resolves info.text query.
 func (i *Info) Text() string { return i.GTxt }
 
+//
+//* Resolver =>
+
 // Info resolves info query.
 func (*Resolver) Info(args struct{ ID graphql.ID }) *Info {
 	return &Info{
 		GID:  args.ID,
-		GTxt: "This is a info string.",
+		GTxt: "Hello, GraphQL!",
 	}
 }

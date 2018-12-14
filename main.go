@@ -16,8 +16,6 @@ var SConfig = &server.Config{
 
 func main() {
 
-	//model.Example()
-
 	log.Println("Running on port" + SConfig.Port)
 	log.Fatalln(server.Run(SConfig))
 }

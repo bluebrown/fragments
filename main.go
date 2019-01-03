@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/bluebrown/fragments/server"
@@ -18,4 +19,8 @@ func main() {
 
 	log.Println("Running on port" + SConfig.Port)
 	log.Fatalln(server.Run(SConfig))
+}
+
+func awesome() {
+	fmt.Println("This is so cool!")
 }
